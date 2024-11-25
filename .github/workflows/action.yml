@@ -1,5 +1,33 @@
 name: Hidden Face Test Workflow
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-hidden-face:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        # 리포지토리의 코드를 체크아웃 (가져오기)
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # 최신 Node.js 버전 사용
+
+      - name: Run Hidden Face Action
+        uses: ./  # 현재 리포지토리의 Action을 사용
+        with:
+          image_path: './images/test.jpg'
+name: Hidden Face Test Workflow
+
 on: [push, pull_request]
 
 jobs:
