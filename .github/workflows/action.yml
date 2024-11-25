@@ -1,4 +1,4 @@
-name: Hidden Face Test Workflow
+.github/workflows/name: Hidden Face Test Workflow
 
 on:
   push:
