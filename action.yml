@@ -1,0 +1,10 @@
+name: 'Hidden Face 2024 Noonootv Action'
+description: 'Automatically hides faces in images using advanced algorithm'
+inputs:
+  image_path:
+    description: 'Path to the image that needs to be processed'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
+
