@@ -1,0 +1,17 @@
+name: Hidden Face Test Workflow
+
+on: [push, pull_request]
+
+jobs:
+  test-hidden-face:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Hidden Face Action
+        uses: ./  # 이 부분은 현재 리포지토리에서 Action을 사용하도록 설정하는 부분이야
+        with:
+          image_path: './images/test.jpg'
+
