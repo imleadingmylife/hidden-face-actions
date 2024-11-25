@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # 리포지토리의 코드를 체크아웃 (가져오기)
 
       - name: Run Hidden Face Action
-        uses: ./  # 현재 리포지토리에서 Action을 사용
+        uses: ./  # 현재 리포지토리의 Action을 사용
         with:
           image_path: './images/test.jpg'
 
